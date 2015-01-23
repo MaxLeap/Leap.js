@@ -1,0 +1,88 @@
+.btn{
+  @include transition(background-color 0.2s);
+  box-shadow:none!important;
+  outline:none!important;
+}
+.btn-mini{
+  padding:0 7px;
+}
+.btn.btn-icon{
+  padding:0;
+  padding-top:5px;
+  span{
+    text-align:center;
+    margin:0;
+    //margin-left:-6px;
+  }
+  width:38px;
+  height:36px;
+}
+.btn.btn-default:active{
+  background-color:darken($clouds,10%);
+}
+.btn.btn-primary,.btn.btn-success{
+  border-color:$dark-blue;
+  background-color:$dark-blue;
+  &:hover{
+    border-color:darken($dark-blue,10%);
+    background-color:darken($dark-blue,10%);
+  }
+  &:active{
+    border-color:darken($dark-blue,10%);
+    background-color:darken($dark-blue,10%);
+  }
+}
+.btn.btn-danger{
+  @include appbutton($red);
+}
+.btn.btn-warning{
+  @include appbutton($yellow);
+}
+
+.input-group-btn{
+  .btn{
+    margin-left:10px!important;
+    border-radius:4px!important;
+    padding:6.5px 20px;
+  }
+}
+.clip-button.zeroclipboard-is-hover {
+  background-color:$clouds;
+}
+.clip-button.zeroclipboard-is-active {
+  background-color:darken($clouds,10%);
+}
+
+.error .input-group{
+  >.input-group-btn{
+    >.btn{
+      margin-bottom:18px;
+    }
+  }
+  .fa-times-circle{
+    margin-top:-16px!important;
+  }
+  .fa-exclamation-circle{
+    right:0!important;
+  }
+}
+
+.btn-group{
+  >.btn{
+    background-color:$white;
+    color:$grey;
+    &.active{
+      border-color:$blue;
+      color:$blue;
+    }
+    &:active{
+      background-color:$white;
+    }
+  }
+}
+
+.btn{
+  .fa-angle-down{
+    margin-left:5px;
+  }
+}

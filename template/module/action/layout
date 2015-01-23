@@ -1,0 +1,52 @@
+define([
+    'text!./template.html',
+    'core/functions/Formatter',
+    'layout/BasicLayout',
+    'container/BasicContainer'
+],function(LayoutTemplate,Formatter,BasicLayout,BasicContainer){
+
+    return {
+        '$ACTION_NAME$':{
+            /**
+             * @attribute stateRoot optional default set to root
+             * @template You must set the template and stateRoot at the same time
+             * @store private store load when the layout is render
+             */
+            constructor:BasicLayout,
+            root:'#$MODULE_NAME$-$ACTION_NAME$',
+            stateRoot:'.container-root',
+            //store:store
+            template:LayoutTemplate,
+            state:{
+                'default':[
+                    {
+                        /**
+                         * @attribute root optional default set to layoutRoot
+                         * @template You must set the template and root at the same time
+                         */
+                        container:BasicContainer,
+                        root:'.container',
+                        template:'<div class="container-normal">container</div>',
+                        components:[
+                            /**
+                             * Add Your Component Here
+                             * @attribute name default to be the id of the HTML node
+                             * @attribute storeName store bind to component
+                             */
+                            //{
+                            //    name:'ComponentName',
+                            //    constructor:ComponentConstructor,
+                            //    options:{
+                            //        //ComponentOptions
+                            //    },
+                            //    extend:{
+                            //        storeName:"Store:StoreName"
+                            //    }
+                            //}
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+});

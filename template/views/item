@@ -1,0 +1,10 @@
+
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="app-icon app-icon-dashboard"></i>
+                            <span class="nav-label">$MENU_NAME$</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            $ITEM$</ul>
+                    </li>

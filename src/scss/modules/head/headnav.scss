@@ -1,0 +1,64 @@
+//Header Navbar
+#header-nav{
+  background-color:$dark-slate;
+  border:0;
+  border-radius:0;
+  margin-bottom:0;
+  height:50px;
+  z-index:3;
+  .navbar-brand{
+    @include box-sizing(border-box);
+    margin:0;
+    padding:0 0 0 30px;
+    width: $sidebar-width;
+    font-family: $LogoFontName;
+    color:#cccccc;
+    line-height:50px;
+  }
+  .navbar-collapse{
+    padding:0;
+  }
+  .navbar-collapse>.navbar-nav{
+    height:50px;
+    >li>a{
+      color:#cccccc;
+      background:none;
+      &:hover{
+        color:$white;
+      }
+    }
+    &.navbar-left{
+      margin-left: $main-content-padding-left - $panel-body-padding;
+    }
+    &.navbar-right{
+      margin-right:$main-content-padding-left;
+      .head-message{
+        margin-right:30px;
+        a{
+          position:relative;
+          padding:13px;
+          span.badge{
+            -webkit-text-size-adjust:100%!important;
+            font-size:10px;
+            position:absolute;
+            background:$dark-blue;
+            top:5px;
+            right:0;
+            padding:3px 5px;
+            border-radius:0;
+            font-weight:normal;
+          }
+        }
+      }
+    }
+  }
+
+  #info-username{
+    padding:7px 0;
+    .app-icon-head{
+      width:36px;
+      height:36px;
+      margin:0 10px;
+    }
+  }
+}

@@ -1,0 +1,226 @@
+
+@charset "UTF-8";
+
+// Core variables and mixins
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+// Reset and dependencies
+@import "../bootstrap/normalize";
+// Core CSS
+@import "../bootstrap/scaffolding";
+@import "../bootstrap/alerts";
+
+//@import "components/loader";
+@import "../custom_variables";
+@import "../custom_common";
+@import "../components/captcha";
+@import "../fonts/SourceSansProLight";
+
+@import "../util/toast";
+
+$btn-background: #0E78FF;
+$pannel-width:345px;
+$input-font-size:18px;
+$input-font-color:#007eff;
+
+
+html,body {
+  background-color: #FFFFFF;
+}
+
+.prelogin-pannel {
+  font-weight: 200;
+  font-family: $SourceSansProLight;
+  width: $pannel-width;
+  margin: auto;
+  margin-top: 10vh;
+  .link{
+    color: #0E78FF;
+    cursor: pointer;
+  }
+  form {
+    margin: 0 auto;
+    .prelogin-logo {
+      display: block;
+      font-size: 24px;
+      font-weight: bold;
+      color: #404040;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .circle {
+      display: block;
+      margin: 0 auto;
+      background: url('/images/prelogin/loading_icon_small@2x.png') no-repeat;
+      background-size: 20px;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      -webkit-animation: spin 1s infinite linear;
+      .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100;
+        height: 100;
+      }
+    }
+
+    .circle.spin {
+      -webkit-animation: spin 2s infinite;
+    }
+
+    .control-group {
+      margin-bottom: 5px;
+      input[type="email"], input[type="password"], input[type="text"] {
+        height: 60px;
+        width: $pannel-width;
+        font-size: $input-font-size;
+        font-weight: 200;
+        padding-left: 20px;
+        font-weight: normal;
+        border: 1px solid #eeeeee;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        color:$input-font-color;
+      }
+      input[type="email"]:hover, input[type="password"]:hover, input[type="text"]:hover,
+      input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
+        box-shadow: none;
+        color: $input-font-color;
+      }
+      input::-webkit-input-placeholder,input:-moz-placeholder ,input::-moz-placeholder ,input:-ms-input-placeholder {
+        color: #D8D8D8;
+        font-size: $input-font-size;
+        font-weight: 200;
+      }
+      .error-promote {
+        color: #ff6552;
+        height: 20px;
+        padding-left: 15px;
+      }
+    }
+    .control-group.error {
+      input, input:hover {
+        border: 1px solid #ff6552;
+      }
+    }
+    .options {
+      color:#428bca;
+      height: 30px;
+      font-family: SourceSansProLight;
+      font-size: 14px;
+
+      .checkbox-inline {
+        width: 130px;
+      }
+
+      .checkbox {
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 0 10px 0 0px;
+        background-size: 20px 20px;
+        background-image: url('/images/prelogin/btn_check@2x.png');
+      }
+
+      .checkbox.checked {
+        background-image: url('/images/prelogin/btn_check_selected@2x.png');
+      }
+
+
+    }
+
+    .prelogin-captcha{
+      .default-text{
+        text-align: center;
+      }
+    }
+
+    .prelogin-submit-btn {
+      display: block;
+      height: 55px;
+      background-color: $input-font-color;
+      width:$pannel-width;
+      border: 1px solid $input-font-color;
+      border-radius: 2px;
+      cursor: pointer;
+      .text{
+        display: block;
+        color: #ffffff;
+        font-size: $input-font-size;
+        text-transform: uppercase;
+      }
+      .circle{
+        display: none;
+      }
+    }
+
+    .prelogin-submit-btn:hover {
+      color: #ffffff;
+      background-color: $input-font-color;
+      border-color: $input-font-color;
+    }
+    .prelogin-submit-btn[disabled] {
+      background-color: #86BBFF;
+      border-color: #86BBFF;
+      color: #86BBFF;
+    }
+    .prelogin-submit-btn.loading{
+      background-color: #86BBFF;
+      border-color: #86BBFF;
+      color: #86BBFF;
+      .text{
+        display: none;
+      }
+      .circle{
+        display: block;
+      }
+    }
+
+    .agree {
+      width: $pannel-width - 45;
+      margin: 30px auto;
+      text-align: center;
+      font-size: 14px;
+      line-height: 16px;
+      // text-transform: capitalize;
+      a {
+        margin: 0 5px;
+      }
+    }
+    .or-line {
+      width: $pannel-width - 45;
+      border-bottom: 1px solid #E7E9EC;
+      margin: 0 auto;
+    }
+
+    .prelogin-tip{
+      width: $pannel-width - 45;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    #facebookLogin {
+      background: #247CD6;
+    }
+    #googleLogin {
+      background: #E04B4B;
+    }
+  }
+
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0)}
+  100% { -webkit-transform: rotate(-360deg)}
+}
+
+
+
+
+
+
+

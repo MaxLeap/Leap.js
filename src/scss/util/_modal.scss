@@ -1,0 +1,22 @@
+.modal-body{
+  @include clearfix();
+  .col-sm-12{
+    @include box-sizing(border-box);
+  }
+  .item{
+    float:left;
+    margin-right:10px;
+    min-width:175px;
+  }
+}
+.modal-header{
+  padding:12px 0;
+  margin:0 30px;
+}
+.modal-footer{
+  padding:12px 0;
+  margin:0 30px;
+  .btn{
+    min-width:70px;
+  }
+}

@@ -1,0 +1,43 @@
+define([
+    'dispatcher',
+    'data/Task',
+    'data/Store',
+    'underscore'
+],function(Dispatcher,Task,Store,_){
+
+    return [
+/**
+ * @attribute initialize if set to true the store where fetch data when loaded,
+ * or you should refresh it in the component manually,
+ * or call the refresh method of the component
+ */
+//        {
+//            name:'Store:StoreName',
+//            constructor:Store,
+////            generator:function(options,taskOptions){
+////                return {
+////                    params:{
+//
+////                    }
+////                };
+////            },
+//            initialize:true,
+//            task:Task,
+//            taskOptions:{
+//                url: 'StoreUrl',
+//                formatter:function(res){
+//                    return _.isArray(res)?res:[];
+//                },
+//                buffer:[]
+//            },
+//            state:{
+//                'stateName':function(data,options){
+//                    /**
+//                     * @param data original data
+//                     * @param options taskOptions
+//                     */
+//                }
+//            }
+//        }
+    ]
+});

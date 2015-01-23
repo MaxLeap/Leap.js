@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@import "custom_variables";
+
+html,body {
+  font-family: $Arial;
+  background-color: $lavender;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  user-select: text;
+  font-size: 14px;
+}
+
+input,input:focus,input:hover{
+  outline: none;
+}
+
+.error {
+  color: #ff6552;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
+}
+
+#content-container {
+  margin-left: 224px;
+  min-width: 768px;
+  padding: 16px;
+}

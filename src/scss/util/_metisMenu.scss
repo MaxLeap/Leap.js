@@ -1,0 +1,167 @@
+/*
+ * metismenu - v1.1.0
+ * Easy menu jQuery plugin for Twitter Bootstrap 3
+ * https://github.com/onokumus/metisMenu
+ *
+ * Made by Osman Nuri Okumus
+ * Under MIT License
+ */
+.arrow {
+  float: right;
+}
+/*
+ * Require Font-Awesome
+ * http://fortawesome.github.io/Font-Awesome/
+*/
+
+
+.fa.arrow:before {
+  content: "\f104";
+}
+
+.active > a > .fa.arrow:before {
+  content: "\f107";
+}
+
+.plus-times {
+  float: right;
+}
+
+.fa.plus-times:before {
+  content: "\f067";
+}
+
+.active > a > .fa.plus-times {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.plus-minus {
+  float: right;
+}
+
+.fa.plus-minus:before {
+  content: "\f067";
+}
+
+.active > a > .fa.plus-minus:before {
+  content: "\f068";
+}
+
+.sidebar-collapse{
+  background-color:$sidebar-background-color;
+  >ul{
+
+  }
+
+  li{
+    border-bottom:1px solid lighten($sidebar-active-color,5%);
+    span.arrow{
+      margin-top:3px;
+    }
+    &:focus{
+      background:none;
+      outline:none;
+    }
+    >a{
+      padding:15px 15px 15px 20px;
+      color:$font-color;
+      &:focus{
+        background:none;
+        outline:none;
+      }
+      .nav-label{
+        margin-left:5px;
+        //vertical-align: bottom;
+      }
+    }
+    &.active{
+      background-color:$sidebar-active-color;
+      a{
+        color:$blue;
+      }
+      &:hover{
+        background-color:$sidebar-active-color;
+        a{
+          background:none;
+          color:darken($blue,10%);
+        }
+      }
+      >.nav-second-level{
+        border-left:2px solid darken($blue,10%);
+      }
+    }
+    &:hover{
+      background-color:lighten($sidebar-background-color,10%);
+      a{
+        background:none;
+        color:lighten($font-color,10%);
+      }
+    }
+    >.nav-second-level{
+      margin-left:50px;
+      border-left:2px solid $grey;
+      li{
+        border:0;
+      }
+      li>a{
+        color:$grey!important;
+        padding:5px 15px 5px 10px;
+        &:focus{
+          background:none;
+          outline:none;
+        }
+      }
+      li:hover{
+        background-color: $sidebar-active-color;
+      }
+      li:hover a{
+        color:lighten($grey,20%)!important;
+      }
+      li.active a{
+        color:darken($blue,10%)!important;
+      }
+      li.active{
+        position:relative;
+      }
+      li.active:before{
+        position:absolute;
+        top:14px;
+        left:0;
+        content:' ';
+        width:8px;
+        height:0;
+        border-top:2px solid darken($blue,10%);
+      }
+    }
+  }
+  li.btn-group{
+    margin-top:-1px;
+    a{
+      font-size:14px;
+      border:0;
+      border-radius:0;
+      padding:15px 0;
+      display:inline-block;
+      width:50%;
+      background-color:#3D4B57;
+      color:$light-grey;
+      @include box-sizing(border-box);
+      &:first-child{
+        border-right:2px solid $sidebar-active-color;
+      }
+      &:hover{
+        color:$blue;
+        background-color:darken($sidebar-active-color,10%);
+      }
+      >.fa{
+        display:block;
+        margin-bottom:5px;
+      }
+    }
+  }
+}

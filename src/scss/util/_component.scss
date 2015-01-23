@@ -1,0 +1,12 @@
+.table-overlay{
+  width:100%;
+  height:100%;
+  top:0;
+  position:absolute;
+  background-color:$white;
+  opacity:0.6;
+  z-index:999;
+  background-image: url('/images/ajax_loader_mini.gif');
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+}

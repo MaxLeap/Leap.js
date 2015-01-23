@@ -1,0 +1,87 @@
+//Second Navbar
+#second-nav{
+  background-color:$white;
+  height:61px;
+  z-index:2;
+  position:relative;
+  border-bottom:1px solid $light-grey;
+  .navbar-nav{
+    background-color:$white;
+    width:$sidebar-width;
+    line-height:60px;
+    margin:0;
+    padding-left:20px;
+    .btn-dashboard{
+      width:34px;
+      height:34px;
+      display:inline-block;
+      padding:4px;
+    }
+
+  }
+
+  .navbar-right{
+    display:none;
+    margin-right: $main-content-padding-left;
+    a{
+      display:inline;
+    }
+    line-height:60px;
+    &.left{
+      margin-left:80px;
+      float:left!important;
+    }
+    li{
+      height:60px;
+      margin: 0 32px;
+      &:last-child{
+        margin-right:0;
+      }
+      text-align:center;
+      &:focus{
+        outline:none;
+      }
+      a{
+        height:60px;
+        padding:35px 5px 0px 5px;
+        display:inline-block;
+        line-height:normal;
+        border-radius:0;
+        position:relative;
+        background:none;
+        border-bottom:2px solid $white;
+        color:$grey;
+        &:focus{
+          outline:none;
+        }
+      }
+      .app-icon{
+        position:absolute;
+        width:24px;
+        height:24px;
+        background-image: url('/images/icon.png');
+        background-repeat: no-repeat;
+        top:8px;
+        left:50%;
+        margin-left:-12px;
+      }
+
+      &.active{
+        a{
+          color:$blue;
+          border-bottom:2px solid $blue;
+        }
+      }
+      &.active:hover{
+        a{
+          color:$blue;
+        }
+      }
+      &:hover{
+        a{
+          color:$black;
+        }
+      }
+    }
+  }
+}

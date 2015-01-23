@@ -1,0 +1,55 @@
+@charset "UTF-8";
+//Colors
+$white:         #ffffff;
+$clouds:        #f7f7f7;
+$lightwhite:    #fcfdfe;
+$light-grey:    #dfe1e6;
+$dark-grey:     #4f5c65;
+$black:         #2c3132;
+$dark-blue:     #3298f0;
+$blue:          #5ab3ff;
+$sky-blue:      #bfe1ff;
+$light-blue:    #e5f3ff;
+$green:         #50c282;
+$light-green:   #92cf5c;
+$light-red:     #FBE3E4;
+$yellow:        #fdd976;
+$red:           #f04c54;
+$deep-sky-blue: #31ccff;
+
+$lavender:#f0f3f9;
+$solitude:#f1f3f8;
+$deep-solitude:#fbfcfe;
+$dark-slate:#37414a;
+$slate:#495864;
+$light-slate:#8e99a1;
+$grey:lighten($slate,15%);
+
+
+$button-border-color:#ccc;
+//Fonts
+$Arial:Arial,sans-serif;
+$Helvetica:'Helvetica Neue', Helvetica,'SourceSansProLight', 'SourceSansPro', Georgia,  'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑',STHeiti, 'WenQuanYi Micro Hei', Arial, sans-serif;
+$SourceSansPro:'SourceSansPro','SourceSansProLight', Georgia, 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑',STHeiti, 'WenQuanYi Micro Hei', Arial, sans-serif;
+$SourceSansProLight:'SourceSansProLight', 'SourceSansPro', Georgia, 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑',STHeiti, 'WenQuanYi Micro Hei', Arial, sans-serif;
+$Avenir: 'Avenir Next', Avenir,'Helvetica Neue', Helvetica,'SourceSansProLight', 'SourceSansPro', Georgia,  'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', STHeiti, 'WenQuanYi Micro Hei', Arial, sans-serif;
+$CenturyGothic:'Century Gothic',Arial,sans-serif;
+
+$LogoFontName:$CenturyGothic;
+
+//Theme
+$sidebar-background-color:      $slate;
+$sidebar-active-color:          $dark-slate;
+
+
+$content-background-color:      $clouds;
+
+$font-color:                    $light-grey;
+$font-active-color:             $dark-blue;
+//Layout
+$sidebar-width: 250px;
+$main-content-padding-left:40px;
+$main-content-padding-right:40px;
+$main-content-padding-top:18px;
+$main-content-padding-bottom:200px;
+

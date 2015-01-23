@@ -1,0 +1,127 @@
+@mixin tablecell(){
+  padding:0 7.5px;
+  font-size: $fontSize;
+  height:$CellHeight;
+  line-height:$CellHeight;
+  border-left:1px solid transparent;
+  border-right:1px solid $light-grey;
+  box-sizing:content-box!important;
+  &:last-child{
+    border-right:1px solid transparent;
+
+  }
+}
+
+.advanced-table{
+  width:100%;
+  .advanced-table-header{
+    background: $solitude;
+    border-bottom:1px solid $light-grey;
+    .advanced-table-header-cell{
+      @include tablecell();
+      height: $headerColumnHeight;
+      line-height: $fontSize;
+      color: $headerColor;
+      font-weight: normal;
+      &.sortable{
+        @include user-select(none);
+        cursor: pointer;
+        >.sort-indicator{
+          float:right;
+          width:8px;
+          height:14px;
+          background-repeat: no-repeat;
+          &.asc{
+            background-image: url('/images/sort-asc.gif');
+          }
+          &.desc{
+            background-image: url('/images/sort-desc.gif');
+            background-position:0 10px;
+          }
+        }
+      }
+    }
+  }
+  .advanced-table-body{
+    tr{
+      border-bottom:1px solid $light-grey;
+    }
+    .advanced-table-cell{
+      @include tablecell();
+      &.action{
+        min-width:100px;
+        .btn{
+          width:22px;
+          height:22px;
+          vertical-align: middle;
+          margin-right:5px;
+          @include box-sizing(border-box);
+        }
+      }
+      .link{
+        color:$blue;
+      }
+    }
+    .even {
+      background: $tableBackgroundAccent;
+    }
+    .odd {
+      background: $tableBackground;
+    }
+  }
+}
+
+.advanced-table .calendar{
+  text-align:center;
+  width:100px;
+  border-radius:8px;
+  border:1px solid $light-grey;
+  overflow:hidden;
+  margin:5px auto;
+  .title{
+    color:$white;
+  }
+  .abort-date-color{
+    background-color: $grey;
+  }
+  .expire-date-color{
+    background-color: $grey;
+  }
+  .done-date-color{
+    background-color: $green;
+  }
+  .schedule-date-color{
+    background-color: $yellow;
+  }
+  .progress-date-color{
+    background-color: $blue;
+  }
+  .date{
+    font-size:30px;
+    padding:5px 0 0 0;
+  }
+}
+
+.advanced-table{
+  .notification-status{
+    font-size:20px;
+    >i{
+      margin-right:5px;
+    }
+  }
+  .progress-date-style{
+    color: $blue;
+  }
+  .abort-date-style{
+    color: $grey;
+  }
+  .done-date-style{
+    color: $green;
+  }
+  .schedule-date-style{
+    color: $yellow;
+  }
+  .expire-date-style{
+    color: $grey;
+  }
+}

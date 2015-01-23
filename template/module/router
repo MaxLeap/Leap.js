@@ -1,0 +1,35 @@
+define([
+    'app',
+    'dispatcher',
+    'jquery',
+    'backbone',
+    'marionette'
+], function (AppCube,Dispatcher,$,Backbone,Marionette) {
+    return Backbone.Marionette.AppRouter.extend({
+        appRoutes:{
+            "(:action)(/:state)":"renderPageLayout"
+        },
+        controller:{
+            renderPageLayout:function(action,state,objectId){
+                this.renderSideBar(action);
+                Dispatcher.trigger('hide',{action:action,state:state},'Layout');
+                Dispatcher.trigger('show',{action:action,state:state},'Layout');
+            },
+            renderSideBar:function(mname){
+                $('#sidebar .nav-second-level').removeClass('in');
+                $('#sidebar .nav-second-level>li').removeClass('active');
+                $('#sidebar .nav>li').removeClass('active');
+                var node = $('#sidebar .nav-second-level>li').has('a[href=#'+mname+']');
+                if(node.length){
+                    node.addClass('active');
+                    var p = node.parent('ul');
+                    p.addClass('in').removeAttr('style');
+                    p.parent('li').addClass('active');
+                }else{
+                    $('#sidebar .nav>li').has('a[href=#'+mname+']').addClass('active');
+
+                }
+            }
+        }
+    });
+});

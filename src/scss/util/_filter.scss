@@ -1,0 +1,205 @@
+#filter-dialog{
+  @include user-select(none);
+  width:600px;
+  z-index:1000;
+  display:none;
+  .flex-1{
+    padding-left:0;
+  }
+  .dropdown{
+    >button{
+      min-width:130px;
+    }
+    .fa-angle-down{
+      float:right;
+      display:inline-block;
+    }
+    margin-right:10px;
+  }
+  .fa-times-circle{
+    position:static;
+    margin-top:10px;
+    margin-left:10px;
+  }
+  &.open{
+    display:block;
+  }
+  .app-icon-filter{
+    z-index:1;
+  }
+}
+#notification-sendto{
+  position:absolute;
+  z-index:2;
+}
+
+#notification-recipients{
+  margin-left:10px;
+}
+
+#segments-filter,#notification-filter{
+  padding:10px;
+  margin-left:20px;
+  margin-top:35px;
+  position:relative;
+  &:before{
+    content:' ';
+    height:100%;
+    position:absolute;
+    top:-30px;
+    left:0;
+    border-left:1px solid $light-grey;
+    z-index:0;
+  }
+  .multiple-conditions-dialog{
+    padding-left:10px;
+    position:relative;
+    &:before{
+      content:' ';
+      width:20px;
+      position:absolute;
+      bottom:20px;
+      left:-10px;
+      border-bottom:1px solid $light-grey;
+      z-index:0;
+    }
+  }
+  .container-flex{
+    position:relative;
+    &:before{
+      content:' ';
+      width:20px;
+      position:absolute;
+      top:16px;
+      left:-20px;
+      border-bottom:1px solid $light-grey;
+      z-index:0;
+    }
+  }
+}
+
+/*
+ * For 3 state in clouddata
+ */
+#filter-content #filter-dialog{
+  position:absolute;
+  top:-11px;
+  left:267px;
+  padding:10px 10px 0 10px;
+  background-color:$white;
+  border:1px solid #ccc;
+  border-radius:6px;
+  .multiple-conditions-dialog{
+    padding-left:30px;
+    margin-bottom:15px;
+  }
+  &.open{
+    @include transition(width 0.2s);
+    display:block;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+  &.open.show{
+    @include transition(width 0.2s);
+    box-shadow:none;
+    top:-6px;
+    padding:5px 50px 0 10px;
+    height:45px;
+    width:650px;
+    .app-icon-filter{
+      top:11px;
+    }
+    .btn-clear-all,.btn-add-condition{
+      display:none;
+    }
+    .btn-apply{
+      position: absolute;
+      top:5px;
+      right:5px;
+    }
+    .modal-footer{
+      padding:0;
+      margin:0;
+      border:0;
+    }
+  }
+  &.open.show-multi{
+    @include transition(width 0.2s);
+    box-shadow:none;
+    top:-6px;
+    padding:5px 50px 0 10px;
+    height:45px;
+    width:650px;
+    .app-icon-filter{
+      top:11px;
+    }
+    .multiple-conditions-dialog,.modal-footer{
+      display:none;
+    }
+    .message{
+      display:block;
+    }
+    .modal-footer{
+      display:none;
+    }
+  }
+  >.layer.active{
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    margin-top:114px;
+    z-index:-1;
+  }
+  .message{
+    cursor: pointer;
+    margin:7px 0 0 28px;
+    display:none;
+  }
+  .app-icon-filter{
+    position:absolute;
+    top:16px;
+    left:6px;
+    cursor:pointer;
+  }
+
+
+  &:before{
+    content:' ';
+    position:absolute;
+    height:auto;
+    top:25px;
+    bottom:91px;
+    left:17px;
+    border-left:1px solid $light-grey;
+    z-index:0;
+  }
+
+  .container-flex{
+    position:relative;
+    &:before{
+      content:' ';
+      width:23px;
+      position:absolute;
+      top:16px;
+      left:-23px;
+      border-bottom:1px solid $light-grey;
+      z-index:0;
+    }
+  }
+
+  .multiple-conditions-dialog{
+    margin-left:20px;
+    padding-left:10px;
+    position:relative;
+    &:before{
+      content:' ';
+      width:23px;
+      position:absolute;
+      bottom:17px;
+      left:-13px;
+      border-bottom:1px solid $light-grey;
+      z-index:0;
+    }
+  }
+}

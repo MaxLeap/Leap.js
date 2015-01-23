@@ -1,0 +1,26 @@
+<% include public/header.html %>
+<link rel="stylesheet" href="/stylesheets/main.css"/>
+<!-- Page Level Script -->
+<script type="text/javascript" src="/javascript/vendor/requirejs/require.js"
+        data-main="/javascript/$MODULE_NAME$Main.js"></script>
+</head>
+<body>
+<!-- BEGIN NAVBAR -->
+<% include public/headerNav.html %>
+<!-- END NAVBAR -->
+<!-- BEGIN CONTAINER -->
+<div class="container-fluid">
+    <div class="container-float">
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-collapse">
+                <ul class="nav">
+                    $SIDEBAR$</ul>
+            </div>
+        </div>
+        <div id="$MODULE_NAME$-content" class="content">
+            $CONTENT$</div>
+    </div>
+</div>
+<div id="sidebar-background"></div>
+<!-- END CONTAINER -->
+<% include public/footer.html %>

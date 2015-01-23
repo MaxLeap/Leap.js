@@ -1,0 +1,5 @@
+require(['main'], function (){
+    require(['extra'],function(){
+        require(['modules/$MODULE_NAME$/bootstrapper']);
+    });
+});

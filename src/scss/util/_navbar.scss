@@ -1,0 +1,28 @@
+.dropdown.type-nav{
+  .dropdown-menu{
+    &:before,&:after{
+      content:' ';
+      width:0;
+      height:0;
+      border-left:8px solid transparent;
+      border-right:8px solid transparent;
+      position: absolute;
+      right: 20px;
+    }
+    &:before{
+      border-bottom:8px solid rgba(0,0,0,0.1);
+      top: -9px;
+    }
+    &:after{
+      border-bottom:8px solid $white;
+      top: -7px;
+    }
+    border-radius: 0px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.06);
+    top: 55px;
+  }
+
+  &.open .dropdown-menu{
+    @include animation(slideDown 0.2s);
+  }
+}

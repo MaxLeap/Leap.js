@@ -1,0 +1,240 @@
+input[type=text],input[type=email],input[type=password],textarea{
+  -webkit-appearance:none;
+  box-shadow:none!important;
+  border-radius:0!important;
+  @include placeholder(#ccc);
+  @include box-sizing(border-box);
+}
+
+textarea{
+  resize:none!important;
+  white-space: pre-wrap;
+  @include placeholder(#ccc);
+}
+
+.form-group select{
+  border-color:rgb(204, 204, 204);
+  background-color: $white;
+  height:34px;
+  min-width:175px;
+  box-shadow:none;
+  cursor:pointer;
+  &:active,&:hover{
+    box-shadow:none;
+    border-color:rgb(173, 173, 173);
+  }
+  &:focus{
+    outline:none!important;
+    box-shadow:none;
+    border-color:rgb(173, 173, 173);
+  }
+}
+
+.form-group.advanced-input{
+  >div{
+    position:relative;
+    .fa{
+      display:none;
+    }
+    .fa-times-circle{
+      display:block;
+      position:absolute;
+      right:25px;
+      top:50%;
+      margin-top:-7.5px;
+      @include animation(appear 0.4s);
+      color:$light-grey;
+      cursor:pointer;
+      &:hover{
+        color:$grey;
+      }
+    }
+    .input-group>.fa-times-circle{
+      right:100px;
+      z-index:999;
+    }
+    .error-msg{
+      display:none;
+    }
+  }
+}
+
+.form-group.advanced-input.success{
+  >div{
+    .fa-check-circle-o{
+      position:absolute;
+      right:-5px;
+      top:50%;
+      margin-top:-7.5px;
+      color:$green;
+      display:block;
+    }
+  }
+}
+
+.form-group.advanced-input.error{
+  >div{
+    .fa-exclamation-circle{
+      position:absolute;
+      right:-5px;
+      top:50%;
+      margin-top:-15.5px;
+      color:$red;
+      display:block;
+    }
+    input,textarea{
+      border:1px solid $red;
+    }
+    .error-msg{
+      color:$red;
+      display:inline;
+    }
+    .fa-times-circle{
+      margin-top:-15.5px;
+    }
+  }
+}
+
+.form-actions{
+  @include clearfix();
+  padding:0;
+  margin-top:-14px;
+  .btn{
+    width:150px;
+    float:right;
+  }
+  >div{
+    padding:0;
+  }
+}
+
+.form-group {
+  .select-parts,.datetime-parts,.input-parts{
+    display:inline-block;
+  }
+}
+
+.form-result {
+  position: relative;
+  padding:15px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  min-height:80px;
+  margin-top:20px;
+  background-color: #ffffff;
+  &:after{
+    box-sizing: border-box;
+    color: rgb(149, 149, 149);
+    display: block;
+    height: 17px;
+    left: 15px;
+    position: absolute;
+    top: 15px;
+    width: 64.78125px;
+    content:'Results';
+  }
+  >pre{
+    margin-top:20px;
+    background-color: #fff;
+    border:0;
+  }
+}
+
+.form-bootstrapWizard{
+  position:relative;
+  width:100%;
+  @include clearfix();
+  display:-webkit-flex;
+  display:flex;
+  margin:0;
+  padding:0;
+  padding-bottom:30px;
+  border-bottom:1px solid $light-grey;
+  >li{
+    -webkit-flex:1;
+    flex:1;
+    list-style: none;
+    text-align:center;
+    padding-top:15px;
+    &:before{
+      border-top: 4px solid $dark-blue;
+      content: "";
+      display: block;
+      position: relative;
+      top: 21px;
+      right: 0;
+      width: 100%;
+      z-index: 0;
+    }
+    &.active ~li{
+      >.step{
+        color:#999;
+        background: #ccc;
+      }
+      >.title{
+        color:#999;
+      }
+      &:before{
+        border-color:#ccc;
+      }
+    }
+    &.success{
+      >.step{
+        background-color: $light-green;
+        @include animation(scale 0.4s);
+      }
+      &:before{
+        border-color: $light-green;
+      }
+    }
+    &.error{
+      >.step{
+        background-color: $red;
+        @include animation(scale 0.4s);
+      }
+      &:before{
+        border-color: $red;
+      }
+    }
+    &:first-child:before{
+      left: 50%;
+      max-width: 50%;
+    }
+    &:last-child:before{
+      width: 50%;
+      max-width: 50%;
+    }
+    >.step{
+      position:relative;
+      display: inline-block;
+      font-weight: 700;
+      padding: 8px 15px;
+      font-size: 15px;
+      border-radius: 50%;
+      color: $white;
+      background: $dark-blue;
+      z-index:1;
+    }
+    >.title{
+      display: block;
+      line-height: 15px;
+      max-width: 100%;
+      padding:10px 0 0 0;
+      text-align: center;
+      word-wrap: break-word;
+      color:$black;
+    }
+    >.text{
+      display: block;
+      font-size: 11px;
+      line-height: 1.4;
+      white-space: pre;
+      word-wrap: break-word;
+      width:50%;
+      margin:auto;
+      text-align:left;
+      padding:0;
+      color:#999;
+    }
+  }
+}

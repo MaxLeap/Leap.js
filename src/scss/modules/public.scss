@@ -1,0 +1,67 @@
+#app-selector,#event-list{
+  margin:0;
+  display:inline-block;
+  .dropdown-menu{
+    width:100%;
+    .btn-add-app{
+      .app-icon-plus{
+        margin-right:5px;
+      }
+    }
+  }
+  button.dropdown-toggle{
+    width:180px;
+    text-align:left;
+    .fa-angle-down{
+      float:right;
+      margin-top:3px;
+    }
+  }
+  li>a{
+    text-overflow:ellipsis;
+    overflow:hidden;
+  }
+  .app-name{
+    display:block;
+    float:left;
+    max-width:140px;
+    vertical-align: middle;
+    text-overflow:ellipsis;
+    overflow:hidden;
+  }
+}
+
+.modal-tip{
+  color:$grey;
+  margin-top:10px;
+}
+
+.table-view,#table-content{
+  @include SlickGrid();
+}
+
+#error-view{
+  @include user-select(none);
+  text-align:center;
+  color:#4f5c65;
+  >.error-content{
+      padding-top:170px;
+      background:url('/images/error_pic.png') no-repeat 50% 0;
+      margin:0 auto;
+      position:relative;
+      margin-top:170px;
+      top:50%;
+      width:500px;
+  }
+}
+
+#side-menu .btn-group{
+  .app-icon{
+    margin:0 auto;
+    display:block;
+    width:24px;
+    height:24px;
+    background-image: url('/images/icon.png');
+    background-repeat: no-repeat;
+  }
+}

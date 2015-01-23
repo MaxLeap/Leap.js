@@ -1,0 +1,31 @@
+define([
+    'app',
+    'core/functions/LayoutRender',
+    'core/functions/StoreLoader',
+    'modules/common/bootstrapper',
+    $ACTION_LAYOUT$'./router',
+    './store',
+    'jquery',
+    'backbone',
+    'metisMenu',
+    'bootstrap'
+],function(AppCube,LayoutRender,StoreLoader,Bootstrapper,
+           $ACTION_LIST$
+           Router,store,$,Backbone){
+
+    Bootstrapper.init();
+    $ACTION_RENDER$
+    $('#sidebar').metisMenu({});
+    $('.sidebar-collapse>.nav>li').not('.btn-group').click(function(e){
+        if($(e.currentTarget).has('ul').length==0){
+            $('.sidebar-collapse>.nav>li').removeClass('active');
+            $('.nav-second-level>li').removeClass('active');
+            $('.nav-second-level').removeClass('in');
+            $(this).addClass('active');
+        }
+        //e.stopPropagation();
+    });
+    StoreLoader.load(store);
+    AppCube.Router = new Router();
+    Backbone.history.start();
+});

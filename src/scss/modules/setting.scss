@@ -1,0 +1,128 @@
+#sidebar{
+  width:$sidebar-width;
+  background-color: $sidebar-background-color;
+}
+#setting-content{
+  border-left:1px solid $light-grey;
+  >div{
+    display:none;
+    &.active{
+      display:block;
+    }
+  }
+  padding-bottom:300px;
+
+  .fbapp-list{
+    .fbapp-item{
+      position:relative;
+      margin-bottom:10px;
+      input{
+        margin-right:10px;
+      }
+      .fa-times-circle{
+        color: #3298f0;
+        cursor: pointer;
+        position: absolute;
+        margin-top: -7px;
+        top: 50%;
+        right: -10px;
+      }
+    }
+  }
+}
+
+
+#segments-form{
+  .time-editor{
+    width:220px;
+    display:inline-block;
+  }
+  .dropdown > .btn{
+    min-width:130px;
+    text-align:left;
+    i{
+      float:right;
+    }
+  }
+  .btn-back{
+    float:left;
+    border-radius:0;
+    border:0;
+    border-right:1px solid $light-grey;
+  }
+}
+
+#segments-filter{
+  .container-flex>.dropdown{
+    >button{
+      max-width:170px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      >i{
+        position:absolute;
+        right:10px;
+      }
+    }
+    >ul{
+      top:34px;
+    }
+  }
+  .select-editor{
+    margin-bottom:5px;
+    >.dropdown{
+      margin-left:10px;
+      display:inline-block;
+      >button{
+        max-width:130px;
+      }
+    }
+  }
+}
+
+#upload-zone{
+  margin-left:20px;
+  margin-top:100px;
+}
+#cloudcode-status{
+  i.fa{
+    margin-left:10px;
+  }
+}
+
+#platform_link{
+  >.container-flex{
+    position:relative;
+    margin-bottom:10px;
+    >.platform-label{
+      min-width:123px;
+      line-height: 34px;
+      margin-right: 37px;
+    }
+    .fa-times-circle{
+      position:absolute;
+      right:-25px;
+      top:50%;
+      margin-top:-7px;
+      color:$blue;
+    }
+    >.platform-name{
+      margin-right: 10px;
+      width:150px;
+      &.error{
+        border-color:$red;
+      }
+    }
+  }
+  .btn-add-platform{
+    .app-icon-plus{
+      @include appicon(2,6);
+    }
+  }
+}
+#app-publish-icon-empty{
+  >canvas{
+    opacity:0.4
+  }
+  overflow:hidden;
+  position:relative;
+}

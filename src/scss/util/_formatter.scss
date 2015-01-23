@@ -1,0 +1,88 @@
+.cell-appname{
+  overflow:visible!important;
+}
+.dashboard-appname{
+  a{
+    text-decoration:none;
+  }
+  margin:0;
+  padding:0;
+  .dashboard-link{
+    &:before,&:after{
+      content:' ';
+      width:0;
+      height:0;
+      border-left:8px solid transparent;
+      border-right:8px solid transparent;
+      position: absolute;
+      left: 30px;
+    }
+    &:before{
+      border-top:8px solid rgba(0,0,0,0.1);
+      bottom: -9px;
+    }
+    &:after{
+      border-top:8px solid $white;
+      bottom: -7px;
+    }
+    display:none;
+    background-color:$white;
+    border:1px solid $light-grey;
+    position:absolute;
+    top:-60px;
+    left:-20px;
+    padding:0;
+    z-index:999;
+    height:60px;
+    width:520px;
+    box-shadow:0 10px 40px rgba(0,0,0,.2);
+    li{
+      display:inline-block;
+      float:left;
+      a{
+        i{
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          top: 8px;
+          left: 50%;
+          margin-left: -12px;
+        }
+        height: 60px;
+        padding: 30px 15px 6px 15px;
+        display: inline-block;
+        border-radius: 0;
+        position: relative;
+        background: none;
+        color: #000!important;
+        &:hover{
+          color:$blue!important;
+        }
+      }
+      $link-icons:(
+        dashboard:0 3,
+        clouddata:1 3,
+        cloudcode:2 3,
+        notification:3 3,
+        analytics:4 3,
+        settings:5 3
+      );
+      &:hover{
+        @each $name, $icon in $link-icons {
+          .app-icon-#{$name}{
+            @include appicon(nth($icon,1),nth($icon,2)+2);
+          }
+        }
+      }
+    }
+  }
+  .dashboard-appname-title{
+    list-style: none;
+    position:relative;
+    &:hover{
+      .dashboard-link{
+        display:block;
+      }
+    }
+  }
+}

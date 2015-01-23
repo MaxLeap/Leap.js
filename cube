@@ -1,0 +1,2 @@
+#!/bin/sh
+exec node "./src/javascript/core/bin/cube.js" "$@"

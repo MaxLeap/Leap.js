@@ -1,0 +1,3 @@
+[submodule "src/javascript/core"]
+	path = src/javascript/core
+	url = https://gitcafe.com/Potato/CubeCore.git

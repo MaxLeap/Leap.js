@@ -1,0 +1,52 @@
+<nav id="second-nav" class="">
+    <div class="container-fluid">
+        <div class="navbar-nav">
+            <a class="btn btn-default btn-dashboard" href="/dashboard">
+                <i class="app-icon app-icon-dashboard"></i>
+            </a>
+            <div id="app-selector">
+                <!-- APP LIST -->
+                <div class="dropdown type-nav">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span class="app-name" data-alue="">&nbsp;</span>
+                        <i class="fa fa-angle-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav nav-pills">
+                <li <% if(id==1){ %>class="active"<% } %>>
+                <a href="/analytics">
+                    <i class="app-icon app-icon-analytics"></i>
+                    Analystics
+                </a>
+                </li>
+                <li <% if(id==2){ %>class="active"<% } %>>
+                <a href="/clouddata">
+                    <i class="app-icon app-icon-clouddata"></i>
+                    Cloud Data
+                </a>
+                </li>
+                <li <% if(id==3){ %>class="active"<% } %>>
+                <a href="/cloudcode">
+                    <i class="app-icon app-icon-cloudcode"></i>
+                    Cloud Code
+                </a>
+                </li>
+                <li <% if(id==4){ %>class="active"<% } %>>
+                <a href="/notification">
+                    <i class="app-icon app-icon-notification"></i>
+                    Push Notification
+                </a>
+                </li>
+                <li <% if(id==5){ %>class="active"<% } %>>
+                <a href="/settings">
+                    <i class="app-icon app-icon-settings"></i>
+                    Settings
+                </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
