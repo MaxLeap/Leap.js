@@ -30,7 +30,7 @@ Leap.js 是一套基于backbone, marionette 及 requirejs的轻量级框架，�
 
 
 ##文档：
-[文档](https://gitcafe.com/Potato/Cube.js/wiki)
+[文档](https://gitcafe.com/Potato/Cube.js/wiki/API%E6%96%87%E6%A1%A3#wiki)
 
  
 ## 快速开始
