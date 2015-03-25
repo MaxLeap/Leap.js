@@ -9,3 +9,7 @@ node_modules
 workspace.xml
 dist
 .tmp
+.editorconfig
+.gitattributes
+.jshintrc
+.travis.yml
