@@ -19,7 +19,7 @@ Leap.js不是一套写demo的框架，更适合用于快速开发产品，解决
 - 需要一个功能较全面的 event-bus 模型(如包含 channel),用于对模块进行解耦和复用
 - 希望像REST API 标准化资源一样标准化前端逻辑
 - 兼容各种UI插件/框架，如jQuery plugins, React, Bootstrap, SemanticUI等
-- 写配置而不是写代码
+- 希望写配置而不是写代码
 - 其他:自由的数据绑定,灵活的错误处理...   
 ...
 
@@ -33,7 +33,7 @@ So, Just have a try!
 
 
 ##文档：
-[文档](https://gitcafe.com/Potato/Cube.js/wiki/API%E6%96%87%E6%A1%A3#wiki)
+[文档](https://gitcafe.com/Potato/Cube.js/wiki/pages)
 
  
 ## 快速开始
