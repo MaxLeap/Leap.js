@@ -1,30 +1,32 @@
 #Leap.as前端框架 Leap.js
 
-Leap.js是[Leap AS Console](https://console.leap.as)反复迭代开发后的产物，主要用于解决前端组件化以及复杂多变的数据和需求的问题。
-
 ##简介：
 
-Leap.js 是一套基于backbone, marionette 及 requirejs的轻量级框架，专注解决模型数据层适配的问题.
+Leap.js是[Leap AS Console](https://console.leap.as)反复迭代开发后的产物，主要用于解决前端组件化以及复杂多变的数据及需求的问题。
+Leap.js不是一套写demo的框架，更适合用于快速开发产品，解决的更多的是实际开发中可能遇到的问题。
+我们不重复造轮子,我们用的轮子有Backbone, Marionette, Requirejs以及各种jQuery插件等。
 
 如果你也:
   
-- 需要一个 非侵入式开箱即用的单页框架
-- 需要数据仓库管理你的数据,以适应各种不同风格的后台 API,并且保持代码的独立性,可复用性
-- 需要在前端进行 join,分页,排序,搜索,计算中间结果并得出最终结果等(NOSQL 环境下此需求更强烈)
-- 需要 内存级别的 HTTP 缓存,自动合并请求，数据格式化，重用数据及数据的多态展示
-- 需要组件化,保证组件间的解耦与可复用性
-- 需要页面结构分层,以适应设计上不可预知的变化
+- 需要一个非侵入式开箱即用的单页webapp框架
+- 页面足够复杂,传统MVC里的Model不够用，需要数据仓库管理你的各种数据,以进行聚合等操作,并且保持代码的独立性,可复用性
+- 你的后端同学不支持join,甚至不支持分页,排序,搜索等操作,需要在前端处理,或给出的是中间结果而非最终结果等
+- 需要内存级别的 HTTP 缓存,自动合并请求,数据格式化,重用数据及数据的多态展示
+- 想要在服务器不稳定的情况下仍然保持较好的用户体验
+- 组件化,保证组件间的解耦与可复用性
+- 页面结构分层,以适应设计上不可预知的变化
 - 需要一个功能较全面的 event-bus 模型(如包含 channel),用于对模块进行解耦和复用
-- 需要像 REST API 标准化资源一样标准化前端逻辑
-- 兼容各种UI插件，如React,bootstrap,SemanticUI
+- 希望像REST API 标准化资源一样标准化前端逻辑
+- 兼容各种UI插件，如jQuery plugins, React, Bootstrap, SemanticUI等
 - 写配置而不是写代码
+- 其他:自由的数据绑定,灵活的错误处理...
 ...
 
-那么, Just have a try!
+So, Just have a try!
 
 
 ##计划：
-- 去掉marionette等换成更简单的框架
+- 去掉Marionette或换成更简单的框架
 - 增加对用户交互事件对管理整合两套事件机制，逐步接近FLUX的设计
 - 进一步拓展UI组件库，动画库
 
@@ -48,7 +50,7 @@ $ npm install
 ```  
 $ bower install
 ```  
-加载CubeCore  
+加载 submodule: [core](https://github.com/LeapAppServices/leap.js-core)  
 ```  
 $ git submodule init & git submodule update
 ```  
@@ -73,7 +75,7 @@ Leap.as Console 前端开发组
 ##感谢：
 
 感谢Leap.as默默耕耘的同学,感谢各位大神帮忙采坑.  
-同时欢迎众大神帮忙扩展，希望这套 Leap 能够不用学习新的“语法”，同时真正解决一些不值得浪费青春的问题。   
+同时欢迎众大神帮忙扩展，希望 Leap.js 能够不用学习新的"语法"，真正解决一些不值得浪费青春的问题。   
 
 ## License
 
